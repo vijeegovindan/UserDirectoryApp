@@ -1,0 +1,17 @@
+{
+  "name": "user_directory",
+  "version": "1.0.0",
+  "description": "User Directory",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-mustache": "^1.0.3",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.4"
+  }
+}
