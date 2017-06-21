@@ -1,7 +1,50 @@
-
-.container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #F5F5F5;
+body {
+  background-color: #60d9f1;
+  font-family: 'PT Sans';
 }
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #F5F5F5;
+  justify-content: space-around;
+}
+
+.inner_container{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1%;
+  padding: 1%;
+  width: 15vw;
+  border: 2px solid grey;
+}
+
+h3{color: blue;}
+
+.hire{color: red;}
+
+.details_user{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #F5F5F5;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5%;
+  padding : 1%;
+}
+
+.img_user{
+  display: flex;
+  flex-flow: column wrap;
+  line-height: 0.5em;
+  padding-right: 1%;
+  padding-top:1%;
+  align-items: flex-end;
+}
+
+.img_user img{
+  border: 1px solid grey;
+  border-radius: 100%;
+}
+
+.cls_info{padding-top: 4%;}

@@ -4,6 +4,7 @@ const mustacheExpress = require('mustache-express');
 const app = express();
 
 app.use(express.static('public'));
+
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
 app.set('view engine', 'mustache')
