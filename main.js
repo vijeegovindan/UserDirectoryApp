@@ -1,4 +1,3 @@
-const dataFile = require('./data.js');
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 var mongoClient = require('mongodb').MongoClient;
