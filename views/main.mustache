@@ -11,7 +11,7 @@
     <div class="container">
 
   <!--Users profile - Index -->
-      {{#users}}
+      {{#user}}
       <div class="inner_container">
         <div class="img_avatar">
           <img src={{avatar}} alt="">
@@ -26,14 +26,14 @@
           {{/job}}
         </div>
       </div>
-      {{/users}}
+      {{/user}}
     </div>
 
 <!-- A user with all their data -->
     <p><h2> User with all their data || user available for hiring</h2></p>
     <hr>
 
-    {{#users}}
+    {{#user}}
     {{#address}}
     {{#university}}
     <div class="details_user">
@@ -53,12 +53,12 @@
     </div>
     {{/university}}
     {{/address}}
-    {{/users}}
+    {{/user}}
 
 
     <p><h2>Users missing educational and city data</h2></p>
     <hr>
-    {{#users}}
+    {{#user}}
       {{^university}}
       {{^city}}
       <div class="details_user">
@@ -80,6 +80,6 @@
         </div>
       {{/city}}
       {{/university}}
-    {{/users}}
+    {{/user}}
   </body>
 </html>
