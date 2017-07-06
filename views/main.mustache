@@ -7,6 +7,9 @@
   </head>
   <body>
     <h1>Index</h1>
+    <a href="#employed">Employed Robots</a> |
+    <a href="#unemployed">Unemployed Robots</a> |
+    <a href="#missingdata">Robots missing data </a>
     <hr>
     <div class="container">
 
@@ -17,7 +20,7 @@
           <img src={{avatar}} alt="">
         </div>
         <div class="details">
-          <h3>{{name}}</h3>
+          <h3><a href="#{{id}}">{{name}}</a></h3>
           {{#job}}
           <p>{{job}} {{company}}</p>
           {{/job}}
@@ -29,13 +32,12 @@
       {{/user}}
     </div>
 
-<!-- A user with all their data -->
-    <p><h2> User with all their data || user available for hiring</h2></p>
+<!-- A user with all their data and employed -->
+    <a id="employed"></a>
+    <p><h2> Employed Users with all their data</h2></p>
     <hr>
-
     {{#user}}
-    {{#address}}
-    {{#university}}
+    {{#job}}
     <div class="details_user">
       <div class="img_user">
         <p><img src="{{avatar}}" alt="user"></p>
@@ -43,19 +45,52 @@
         <p><b>Skills</b></p>
       </div>
       <div class="cls_info">
+        <a id="{{id}}"></a>
         <h1>{{name}}</h1>
-        {{#job}}<p>{{#city}}{{city}},{{/city}}{{country}} | {{job}}, {{company}}</p>{{/job}}
-        {{^job}}<p class="hire">Available for hire</p>{{/job}}
+        {{#address}}
+        <p>{{#city}}{{city}},{{/city}}{{country}} | {{job}}, {{company}}</p>
+        {{/address}}
         <p>{{email}} | {{phone}}</p>
+        {{#university}}
         <p>{{university}}</p>
         <p>{{skills}}</p>
+        {{/university}}
       </div>
     </div>
-    {{/university}}
-    {{/address}}
+    {{/job}}
     {{/user}}
 
+<!-- A user with all their data and unemployed -->
+    <a id="unemployed"></a>
+    <p><h2> Unemployed Robots with all their data</h2></p>
+    <hr>
+    {{#user}}
+    {{^job}}
+    <div class="details_user">
+      <div class="img_user">
+        <p><img src="{{avatar}}" alt="user"></p>
+        <p><b>Educations</b></p>
+        <p><b>Skills</b></p>
+      </div>
+      <div class="cls_info">
+        <a id="{{id}}"></a>
+        <h1>{{name}} - here</h1>
+        <p class="hire">Available for hire</p>
+        {{#address}}
+        <p>{{#city}}{{city}},{{/city}}{{country}} | {{job}}, {{company}}</p>
+        {{/address}}
+        <p>{{email}} | {{phone}}</p>
+        {{#university}}
+        <p>{{university}}</p>
+        <p>{{skills}}</p>
+        {{/university}}
+      </div>
+    </div>
 
+    {{/job}}
+    {{/user}}
+
+    <a id="missingdata"></a>
     <p><h2>Users missing educational and city data</h2></p>
     <hr>
     {{#user}}
@@ -67,6 +102,7 @@
           <p><b>Skills</b></p>
         </div>
         <div class="cls_info">
+          <a id="{{id}}"></a>
           <h1>{{name}}</h1>
           {{#address}}
           {{#job}}

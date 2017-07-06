@@ -15,7 +15,7 @@ app.get('/',function(req, res){
     else{
         var dbCollection = db.collection('user');
         dbCollection.find().toArray().then(function(user){
-          res.render('main', {user: user});
+        res.render('main', {user: user});
         });
       }
   });
